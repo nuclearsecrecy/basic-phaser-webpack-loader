@@ -2,10 +2,10 @@
 
 This is a template for setting up a game in the [Phaser](https://phaser.io/) coding environment. Unlike the examples on the Phaser site, it assumes a few things:
 
-* That your game is going to eventually contain many Scenes.
+* That your game is going to eventually contain many [Scenes](https://docs.phaser.io/api-documentation/class/scene).
 * That you would like to load the game in a [Webpack](https://webpack.js.org/) environment for both development and production output.
-* That you will eventually have a lot of assets that will need to be loaded, and you will not want to keep manual lists of them.
-* That you would like your game to preload all of your assets automatically each time you launch it.
+* That you will eventually have a lot of assets (e.g. images, sprites, etc.) that will need to be loaded, and you will not want to keep manual lists of them every time you want to add a new one.
+* That you would like your game to preload all of your assets automatically each time you launch it and have a little progress bar while it does so.
 * That when you are ready to export your game so that it does not require a Node environment to play, you will want all of the assets and game files bundled into a single directory for easy distribution.
 
 These assumptions may not all be true in your case, but it is relative easy to disable these things within this template. It is designed to be just-simple-enough to accomplish all of the above. 
