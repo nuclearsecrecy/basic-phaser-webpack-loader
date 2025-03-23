@@ -13,7 +13,6 @@ const base = require("./base.js");
 const fs = require("fs");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 var dist = "../dist"; //output path, relative to base path
 
@@ -47,9 +46,6 @@ module.exports = {
 		},
 		plugins: [
 			...base.plugins,
-			new CleanWebpackPlugin({
-				root: path.resolve(__dirname, "../"),
-			}),	
 			{
 				apply: (compiler) => {
 					compiler.hooks.afterEmit.tap("AfterEmitPlugin", (compilation) => {

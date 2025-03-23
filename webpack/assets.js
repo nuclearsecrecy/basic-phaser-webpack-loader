@@ -19,8 +19,6 @@ const { getAssets } = require("./lib/getAssets.js");
 
 const path = require("path");
 
-console.log("ASSETS.JS");
-
 //path to public assets
 var public_path = path.join(__dirname, "..", "public");
 var assets_path = path.join(public_path, "assets");
