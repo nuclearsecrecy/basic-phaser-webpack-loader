@@ -42,9 +42,9 @@ Doing so will (by default) put a copy of the game and its assets in the folder `
 
 # Loading assets
 
-This is set up so that there is a directory for game code called `src`, and a higher-level directory called `public` for all game assets. When you run WebPack, `public` will be the base directory for `localhost:8080/`. 
+This is set up so that there is a directory for game code called `src`, and a higher-level directory called `public` for all game assets. When you run Webpack, `public` will be the base directory for `localhost:8080/`. 
 
-The way the auto-loader works is that upon initializing, WebPack will run `/webpack/assets.js`. This is a little bit of code that checks if you have added (or removed) files from the `public/assets` directories and updates `JSON` files in the `public/assets/data` directory accordingly. The `Preloader.js` scene will use these files to detect what assets to load. 
+The way the auto-loader works is that upon initializing, Webpack will run `/webpack/assets.js`. This is a little bit of code that checks if you have added (or removed) files from the `public/assets` directories and updates `JSON` files in the `public/assets/data` directory accordingly. The `Preloader.js` scene will use these files to detect what assets to load. 
 
 By default, it is set up to load only two types of assets: images and sprites. Images are single-framed textures (e.g., `PNG` files) that have been put into the directory `public/assets/images`. Sprites are `PNG` and `JSON` files exported by [Aseprite](https://www.aseprite.org/) and meant to be used for animated sprites.
 
