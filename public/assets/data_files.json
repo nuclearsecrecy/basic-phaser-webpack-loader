@@ -1,0 +1,8 @@
+{
+	"assets": "assets/",
+	"datapath": "assets/data",
+	"json": {
+		"images": "images.json",
+		"sprites": "sprites.json"
+	}
+}
