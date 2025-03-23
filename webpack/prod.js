@@ -8,18 +8,17 @@
  * most basic settings can be changed in `base.js`.
  */
 
-const path = require("path");
 const base = require("./base.js");
 const fs = require("fs");
 const TerserPlugin = require("terser-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
 
-var dist = "../dist"; //output path, relative to base path
+const dist_path = path.join(__dirname, "..", "dist"); //output path
 
 //copy relevant folders to dist
 require("./lib/copyFiles.js")({
-	public: "../public",
-	output: dist,
+	public: base.devServer.static.directory,
+	output: dist_path,
 	exclude: [], //never export files with these names
 	exclude_ext: ["psd","aseprite","DS_Store"], //never export files with these extensions
 });

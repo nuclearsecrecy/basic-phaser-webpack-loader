@@ -15,7 +15,7 @@ module.exports = function (config) {
 		return false;
 	}
 
-	var base = path.join(__dirname, "..");
+	var base = "";
 
 	var output_dir = path.join(base, config.output);
 

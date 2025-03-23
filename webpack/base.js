@@ -15,6 +15,9 @@ const path = require("path");
 
 //regenerate the asset json files each time webpack is run
 require("./assets.js");
+
+const public_path = path.join(__dirname, "..", "public");
+
 module.exports = {
 	mode: "development",
 	devtool: "eval-source-map",
@@ -27,7 +30,7 @@ module.exports = {
 	devServer: {
 		// Specifies the location of the assets directory
 		static: {
-			directory: path.join(__dirname, "..", "public"),
+			directory: public_path,
 		}
 	},
 	module: {
