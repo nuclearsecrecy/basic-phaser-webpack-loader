@@ -38,7 +38,7 @@ When you want to compile your game for distribution, run the following command:
 npm run build
 ```
 
-Doing so will (by default) put a copy of the game and its assets in the folder `./dist/`. It takes a minute or so to compile the game assets, usually. If the `dist` folder does not exist, it will not create it. 
+Doing so will (by default) put a copy of the game and its assets in the folder `./dist/`. It takes a minute or so to compile the game assets, usually. If the `dist` folder does not exist, it will **not** create it (to avoid causing any havoc).
 
 # Loading assets
 
@@ -54,7 +54,7 @@ To set up a new directory of assets, or different kinds of assets, you must:
 2. Edit `public/data_files.json` to tell it what `JSON` files to store the asset references in (e.g., the `"images": "images.json"` part is telling it that "assets loaded as 'images' are found in 'images.json').
 3. Edit `src/Preloader.js` to load it with the correct [loader](https://docs.phaser.io/phaser/concepts/loader) type (e.g., `this.load.image` or `this.load.audio`).
 
-**NOTE:** `assets.js` is only run when you run `npm start` or `npm build` — it does not get "re-run" every time Webpack does a "hot" update. So if you add new asset(s), you need to stop Node (control+C in the terminal) and then run `npm start` again.
+**NOTE:** `assets.js` is only run when you run `npm start` or `npm run build` — it does not get "re-run" every time Webpack does a "hot" update or if you just add a new file into the assets directory. So when you add new assets, you need to stop Node (`control+C` in the terminal) and then run `npm start` again to re-load. (It would be nice if this wasn't necessary, but I think it is required.)
 
 # Directories and files
 
@@ -91,3 +91,5 @@ This is a basic overview of the directories and files and their purpose in this 
 I am not the world's most knowledgable about Webpack so it is entirely possible that the settings I've used involve unnecessary packages, etc. 
 
 It would be WONDERFUL if it was possible to cause the Webpack hot reloader to detect when NEW files are added to the assets directories, and then trigger a rebuild of the assets files. However I cannot figure out how this would work, as it does not appear to detect new files being added under any settings I can find. 
+
+I have nothing to do with either Phaser or Webpack. Use at your own risk, no warranties given, etc. I do not claim copyright on anything here.
